@@ -232,56 +232,6 @@ RegisterNUICallback('spawnplayer', function(data, cb)
     cb('ok')
 end)
 
--- RegisterNUICallback('spawnplayer', function(data, cb)
---     local location = tostring(data.spawnloc)
---     local type = tostring(data.typeLoc)
---     local ped = PlayerPedId()
---     local PlayerData = QBCore.Functions.GetPlayerData()
---     local insideMeta = PlayerData.metadata['inside']
---     if type == 'current' then
---         PreSpawnPlayer()
---         QBCore.Functions.GetPlayerData(function(pd)
---             ped = PlayerPedId()
---             SetEntityCoords(ped, pd.position.x, pd.position.y, pd.position.z)
---             SetEntityHeading(ped, pd.position.a)
---             FreezeEntityPosition(ped, false)
---         end)
-
---         if insideMeta.house ~= nil then
---             local houseId = insideMeta.house
---             TriggerEvent('qb-houses:client:LastLocationHouse', houseId)
---         elseif insideMeta.apartment.apartmentType ~= nil or insideMeta.apartment.apartmentId ~= nil then
---             local apartmentType = insideMeta.apartment.apartmentType
---             local apartmentId = insideMeta.apartment.apartmentId
---             TriggerEvent('qb-apartments:client:LastLocationHouse', apartmentType, apartmentId)
---         end
---         TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
---         TriggerEvent('QBCore:Client:OnPlayerLoaded')
---         PostSpawnPlayer()
---     elseif type == 'house' then
---         PreSpawnPlayer()
---         TriggerEvent('qb-houses:client:enterOwnedHouse', location)
---         TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
---         TriggerEvent('QBCore:Client:OnPlayerLoaded')
---         TriggerServerEvent('qb-houses:server:SetInsideMeta', 0, false)
---         TriggerServerEvent('qb-apartments:server:SetInsideMeta', 0, 0, false)
---         PostSpawnPlayer()
---     elseif type == 'normal' then
---         local pos = QB.Spawns[location].coords
---         PreSpawnPlayer()
---         SetEntityCoords(ped, pos.x, pos.y, pos.z)
---         TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
---         TriggerEvent('QBCore:Client:OnPlayerLoaded')
---         TriggerServerEvent('qb-houses:server:SetInsideMeta', 0, false)
---         TriggerServerEvent('qb-apartments:server:SetInsideMeta', 0, 0, false)
---         Wait(500)
---         SetEntityCoords(ped, pos.x, pos.y, pos.z)
---         SetEntityHeading(ped, pos.w)
---         PostSpawnPlayer()
---     end
---     cb('ok')
--- end)
-
 -- Threads
 
 CreateThread(function()
