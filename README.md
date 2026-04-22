@@ -1,30 +1,25 @@
-# qb-spawn
-Spawn Selector for QB-Core Framework :eagle:
+# Lisens
 
-# License
+QBCore Framework
+Opphavsrett (C) 2021 Joshua Eger
 
-    QBCore Framework
-    Copyright (C) 2021 Joshua Eger
+Dette programmet er fri programvare: du kan redistribuere det og/eller endre
+det under vilkårene i GNU General Public License som publisert av
+Free Software Foundation, enten versjon 3 av lisensen, eller
+(etter ditt valg) en senere versjon.
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+Dette programmet distribueres i håp om at det vil være nyttig,
+men UTEN NOEN GARANTI; uten engang den implisitte garantien om
+SALGBARHET eller EGNETHET FOR ET SPESIFIKT FORMÅL. Se
+GNU General Public License for flere detaljer.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>
+Du skal ha mottatt en kopi av GNU General Public License
+sammen med dette programmet. Hvis ikke, se https://www.gnu.org/licenses/
 
 
 ## Dependencies
-- [qb-core](https://github.com/qbcore-framework/qb-core)
-- [qb-houses](https://github.com/qbcore-framework/qb-houses) - Lets player select the house
-- [qb-apartment](https://github.com/qbcore-framework/qb-apartment) - Lets player select the apartment
-- [qb-garages](https://github.com/qbcore-framework/qb-garages) - For house garages
+- [ox_lib](https://github.com/CommunityOx/ox_lib)
+- [qbx_core](https://github.com/Qbox-project/qbx_core)
 
 ## Screenshots
 ![Spawn selector](https://i.imgur.com/nz0mPGe.png)
@@ -37,10 +32,9 @@ Spawn Selector for QB-Core Framework :eagle:
 - Download the script and put it in the `[qb]` directory.
 - Add the following code to your server.cfg/resouces.cfg
 ```
-ensure qb-core
+ensure ox_lib
+ensure qbx_core
 ensure qb-spawn
-ensure qb-apartments
-ensure qb-garages
 ```
 
 ## Configuration
